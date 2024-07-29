@@ -4,7 +4,7 @@
  * 3. ref: 创建一个响应式的ref对象
  * 4. computed: 创建一个响应式的computed对象
  */
-export { reactive } from './reactive.ts'
+export { reactive } from './reactive'
 export { effect } from './effect'
 export { ref } from './ref'
 export { computed } from './computed'

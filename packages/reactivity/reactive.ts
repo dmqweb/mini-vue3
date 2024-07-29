@@ -1,5 +1,15 @@
+import { isObject } from "../../packages/shared";
+import { mutableHandlers } from "./baseHandlers";
 export const enum ReactiveFlags {
     IS_REACTIVE = '__v_isReactive'
+}
+/**
+ * 返回响应性对象
+ */
+const reactiveMap = new WeakMap<object,any>()
+export function reactive(target:object) {
+    // 使用reactive函数时，创建一个响应性对象
+    return createReactiveObject(target,mutableHandlers,reactiveMap);
 }
 /**
  * 创建响应性对象

@@ -9,3 +9,9 @@ export interface VNode {
     children: any,
     shapeFlag: number
 }
+export function createVNode() {
+    
+}
+export function isVNode() {
+    
+}
